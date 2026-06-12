@@ -1,7 +1,9 @@
 import http.server
 import socketserver
+import os
 
 PORT = 5000
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'public'))
 
 class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
