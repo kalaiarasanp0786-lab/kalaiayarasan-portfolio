@@ -133,3 +133,24 @@ window.addEventListener('scroll',()=>{
     a.classList.toggle('active',a.getAttribute('href')==='#'+cur);
   });
 });
+
+function downloadResume(){
+  fetch('resume.pdf')
+    .then(function(res){
+      if(!res.ok) throw new Error('not found');
+      return res.blob();
+    })
+    .then(function(blob){
+      var url=URL.createObjectURL(blob);
+      var a=document.createElement('a');
+      a.href=url;
+      a.download='Kalaiyarasan_Resume.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    })
+    .catch(function(){
+      window.open('resume.pdf','_blank');
+    });
+}
