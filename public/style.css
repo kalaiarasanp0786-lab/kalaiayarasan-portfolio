@@ -211,6 +211,24 @@ section{position:relative;z-index:1;}
 .cert-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:.8rem;font-size:.82rem;color:var(--t2);transition:.3s;cursor:default;}
 .cert-item:hover{border-color:var(--em);color:var(--white);}
 .cert-ico{color:var(--em);font-size:1.1rem;flex-shrink:0;}
+.cert-featured{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:1.8rem;transition:.3s;position:relative;}
+.cert-featured::before{content:'';position:absolute;top:0;inset-x:0;height:3px;background:linear-gradient(90deg,var(--em),var(--em-d));}
+.cert-featured:hover{border-color:var(--em);transform:translateY(-4px);box-shadow:0 16px 40px rgba(16,185,129,.1);}
+.cert-featured-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.cert-img-wrap{position:relative;overflow:hidden;background:#000;min-height:220px;cursor:pointer;}
+.cert-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block;}
+.cert-img-wrap:hover img{transform:scale(1.03);}
+.cert-img-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);opacity:0;transition:.3s;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;font-weight:700;gap:6px;}
+.cert-img-wrap:hover .cert-img-overlay{opacity:1;}
+.cert-info{padding:1.8rem;}
+.cert-info-label{font-size:.68rem;font-weight:700;color:var(--em);letter-spacing:.14em;text-transform:uppercase;margin-bottom:.4rem;}
+.cert-info-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;line-height:1.35;margin-bottom:.3rem;}
+.cert-info-org{font-size:.82rem;color:var(--t3);margin-bottom:.2rem;}
+.cert-info-date{font-size:.75rem;color:var(--em);font-weight:600;margin-bottom:.9rem;}
+.cert-info-desc{font-size:.82rem;color:var(--t3);line-height:1.75;margin-bottom:1rem;}
+.cert-skills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.2rem;}
+.cert-skill{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);color:var(--em);font-size:.68rem;padding:3px 9px;border-radius:5px;font-weight:600;}
+@media(max-width:700px){.cert-featured-inner{grid-template-columns:1fr;}.cert-img-wrap{min-height:180px;}}
 
 /* ═══ CONTACT ═══ */
 #contact{padding:90px 0;}
