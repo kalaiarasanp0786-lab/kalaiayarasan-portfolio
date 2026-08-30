@@ -200,6 +200,13 @@ section{position:relative;z-index:1;}
 .cert-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:.8rem;font-size:.82rem;color:var(--t2);transition:.3s;cursor:default;}
 .cert-item:hover{border-color:var(--em);color:var(--white);}
 .cert-ico{color:var(--em);font-size:1.1rem;flex-shrink:0;}
+.cert-item--detailed{align-items:flex-start;}
+.cert-item-content{display:block;min-width:0;}
+.cert-item-title{display:block;color:var(--white);font-size:.84rem;line-height:1.35;margin-bottom:.25rem;}
+.cert-item-org{display:block;color:var(--em);font-size:.74rem;line-height:1.4;margin-bottom:.65rem;}
+.cert-skill-label{display:block;color:var(--t3);font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem;}
+.cert-skill-list{margin:0;padding-left:1rem;color:var(--t3);font-size:.72rem;line-height:1.55;}
+.cert-skill-list li{margin-bottom:.15rem;}
 
 /* ═══ CONTACT ═══ */
 #contact{padding:90px 0;}
