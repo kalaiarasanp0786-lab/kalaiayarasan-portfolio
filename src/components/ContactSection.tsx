@@ -50,23 +50,26 @@ export const ContactSection: React.FC = () => {
           {/* Contact Links & Socials */}
           <Reveal>
             <div className="flex flex-col gap-3.5">
-              {CONTACT_LINKS.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target={item.external ? '_blank' : undefined}
-                  rel={item.external ? 'noopener noreferrer' : undefined}
-                  className="flex items-center gap-4 text-[#CBD5E1] bg-[#1E293B] border border-[#334155] rounded-[11px] py-4 px-5 text-[0.86rem] transition-all duration-200 hover:text-white hover:border-[#10B981] hover:translate-x-1"
-                >
-                  <span className="text-[1.25rem] shrink-0">{item.icon}</span>
-                  <div className="min-w-0 truncate">
-                    <span className="text-[0.68rem] text-[#10B981] font-bold tracking-[0.1em] uppercase block mb-0.5">
-                      {item.label}
-                    </span>
-                    <span className="truncate block">{item.value}</span>
-                  </div>
-                </a>
-              ))}
+              {CONTACT_LINKS.map((item) => {
+                const isTel = item.href.startsWith('tel:');
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target={item.external ? '_blank' : isTel ? '_top' : undefined}
+                    rel={item.external ? 'noopener noreferrer' : undefined}
+                    className="flex items-center gap-4 text-[#CBD5E1] bg-[#1E293B] border border-[#334155] rounded-[11px] py-4 px-5 text-[0.86rem] transition-all duration-200 hover:text-white hover:border-[#10B981] hover:translate-x-1"
+                  >
+                    <span className="text-[1.25rem] shrink-0">{item.icon}</span>
+                    <div className="min-w-0 truncate">
+                      <span className="text-[0.68rem] text-[#10B981] font-bold tracking-[0.1em] uppercase block mb-0.5">
+                        {item.label}
+                      </span>
+                      <span className="truncate block">{item.value}</span>
+                    </div>
+                  </a>
+                );
+              })}
 
               <div className="mt-2">
                 <div className="text-[0.7rem] text-[#94A3B8] font-semibold tracking-[0.1em] uppercase mb-3">
@@ -132,8 +135,9 @@ export const ContactSection: React.FC = () => {
 
                   <a
                     href="tel:+917339005728"
+                    target="_top"
                     title="Call"
-                    aria-label="Call"
+                    aria-label="Call +91 7339005728"
                     className="w-[50px] h-[50px] rounded-[11px] bg-[#1E293B] border border-[#334155] flex items-center justify-center transition-all duration-200 hover:border-[#10B981] hover:-translate-y-1 hover:bg-[#10B981]/10"
                   >
                     <svg
