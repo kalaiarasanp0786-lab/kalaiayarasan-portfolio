@@ -1,1 +1,0 @@
-- [Static server restart binding](workflow-port-reuse.md) — the Python preview server must reuse its port so workflow restarts can rebind cleanly.

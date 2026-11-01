@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --dark: #0F172A;
+    --card: #1E293B;
+    --border: #334155;
+    --em: #10B981;
+    --em-l: #34D399;
+    --em-d: #059669;
+    --white: #ffffff;
+    --t2: #CBD5E1;
+    --t3: #94A3B8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-sans-body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Biotech subtle SVG background patterns */
+.bg-dna {
+  position: relative;
+  overflow: hidden;
+}
+.bg-dna::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='20' fill='none' stroke='%2310B981' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='10' fill='none' stroke='%2310B981' stroke-width='.5'/%3E%3Cline x1='10' y1='30' x2='50' y2='30' stroke='%2310B981' stroke-width='.5'/%3E%3Cline x1='30' y1='10' x2='30' y2='50' stroke='%2310B981' stroke-width='.5'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+.bg-helix {
+  position: relative;
+  overflow: hidden;
+}
+.bg-helix::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cellipse cx='40' cy='20' rx='18' ry='8' fill='none' stroke='%2310B981' stroke-width='1'/%3E%3Cellipse cx='40' cy='40' rx='18' ry='8' fill='none' stroke='%2310B981' stroke-width='.6'/%3E%3Cellipse cx='40' cy='60' rx='18' ry='8' fill='none' stroke='%2310B981' stroke-width='1'/%3E%3Cline x1='22' y1='20' x2='22' y2='60' stroke='%2310B981' stroke-width='.5'/%3E%3Cline x1='58' y1='20' x2='58' y2='60' stroke='%2310B981' stroke-width='.5'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+.bg-hex {
+  position: relative;
+  overflow: hidden;
+}
+.bg-hex::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='80'%3E%3Cpolygon points='35,2 65,18 65,52 35,68 5,52 5,18' fill='none' stroke='%2310B981' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 70px 80px;
+}
+
+.bg-atom {
+  position: relative;
+  overflow: hidden;
+}
+.bg-atom::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='50' cy='50' r='4' fill='%2310B981'/%3E%3Cellipse cx='50' cy='50' rx='35' ry='15' fill='none' stroke='%2310B981' stroke-width='.8'/%3E%3Cellipse cx='50' cy='50' rx='35' ry='15' fill='none' stroke='%2310B981' stroke-width='.8' transform='rotate(60 50 50)'/%3E%3Cellipse cx='50' cy='50' rx='35' ry='15' fill='none' stroke='%2310B981' stroke-width='.8' transform='rotate(120 50 50)'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+}
+
+.hero-grid-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Glitch name effect from original portfolio */
+.hero-glitch-name {
+  display: inline-block;
+  position: relative;
+}
+.hero-glitch-name::before,
+.hero-glitch-name::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+.hero-glitch-name::before {
+  color: #10B981;
+  animation: glitch1 5s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+}
+.hero-glitch-name::after {
+  color: rgba(16, 185, 129, 0.4);
+  animation: glitch2 5s infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch1 {
+  0%, 88%, 100% { transform: none; }
+  90% { transform: translateX(-4px); }
+  93% { transform: translateX(4px); }
+  96% { transform: translateX(-2px); }
+}
+
+@keyframes glitch2 {
+  0%, 88%, 100% { transform: none; }
+  90% { transform: translateX(4px); }
+  93% { transform: translateX(-4px); }
+  96% { transform: translateX(2px); }
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink-cursor {
+  animation: blinkCursor 1s step-end infinite;
+}
+
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+
+.photo-conic-ring {
+  background: conic-gradient(#10B981, #059669, #0F172A, #10B981);
+  animation: spinSlow 8s linear infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+/* Scroll reveal transition */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .photo-conic-ring,
+  .hero-glitch-name::before,
+  .hero-glitch-name::after {
+    animation: none;
+  }
+}
