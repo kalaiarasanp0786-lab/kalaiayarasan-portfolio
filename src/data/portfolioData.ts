@@ -5,7 +5,6 @@ import {
   SkillCategory,
   ExperienceItem,
   ProjectItem,
-  FeaturedCertification,
   CertificationItem,
   AchievementItem,
   ContactLinkItem,
@@ -262,50 +261,166 @@ export const PROJECTS: ProjectItem[] = [
   },
 ];
 
-export const FEATURED_CERTIFICATION: FeaturedCertification = {
-  label: 'Featured Workshop Certificate',
-  title: 'Scientific Research Writing & Publication',
-  organization: 'DNA Barcode Biotechnology',
-  date: 'July 2026',
-  description:
-    'Workshop on "From Research Idea to Publication: A Practical Guide to Scientific Writing" focused on manuscript preparation, research communication, and academic publishing standards.',
-  skills: [
-    'Scientific Writing',
-    'Manuscript Preparation',
-    'Research Publication',
-    'Academic Communication',
-  ],
-  imageUrl: '/cert-dna-barcode.png',
-};
-
 export const CERTIFICATIONS: CertificationItem[] = [
   {
+    id: 'cert-ich-gcp-e6r3',
     icon: '🏅',
     title: 'ICH Good Clinical Practice (GCP) E6(R3)',
     organization: 'The Global Health Network',
-    skillsLabel: 'Skills gained',
-    skillsList: [
-      'Core principles of Good Clinical practice',
+    skillsGained: [
+      'Core principles of Good Clinical Practice',
       'Ethical conduct of clinical trials',
       'Protection of clinical trial participants',
       'Roles and responsibilities of investigators and trial stakeholders',
       'Data integrity and reliable clinical trial results',
     ],
   },
-  { icon: '🏅', title: 'Good Clinical Practice – NIDA (2025)' },
-  { icon: '🏅', title: 'NPTEL – Experimental Biotechnology' },
-  { icon: '🏅', title: 'NPTEL – Stress Management' },
-  { icon: '🏅', title: 'Cancer Cell Culture – Sathyabama Institute' },
-  { icon: '🏅', title: 'QA/QC & Pharmaceutical Production' },
-  { icon: '🏅', title: 'RNA Isolation & qPCR Workshop' },
-  { icon: '🏅', title: 'Dot ELISA Workshop – MEC' },
-  { icon: '🏅', title: 'Clinical Trial Management' },
   {
+    id: 'cert-iit-madras-clinical-trials',
     icon: '🏅',
-    title: 'Scientific Research Writing & Publication – DNA Barcode Biotechnology (2026)',
-    certificateImage: '/cert-dna-barcode.png',
+    title:
+      'Current Regulatory Requirements for Conducting Clinical Trials in India for Investigational New Drugs/New Drugs (Version 3.0)',
+    organization: 'IIT Madras',
+    category: 'Clinical Research | Drug Regulatory Affairs',
+    description:
+      'Completed a course covering the current regulatory requirements for conducting clinical trials in India, focusing on investigational new drugs, new drug approvals, clinical trial regulations, and regulatory compliance.',
+    skillsGained: [
+      'Indian Drug Regulatory System',
+      'Preclinical Research and Clinical Trials',
+      'Bioavailability and Bioequivalence (BA/BE)',
+      'Research Ethics and Good Clinical Practice (GCP)',
+      'Investigational New Drugs and New Drug Approval',
+      'Clinical Trial Documentation',
+      'Clinical Trial Monitoring and Compliance',
+      'Drug Development and Online Regulatory Submissions',
+    ],
   },
-  { icon: '🏆', title: 'Smart India Hackathon – 2026' },
+  {
+    id: 'cert-dna-barcode-writing',
+    icon: '🏅',
+    title: 'Scientific Research Writing & Publication',
+    organization: 'DNA Barcode Biotechnology',
+    year: '2026',
+    description:
+      'Workshop on "From Research Idea to Publication: A Practical Guide to Scientific Writing" focused on manuscript preparation, research communication, and academic publishing standards.',
+    skillsGained: [
+      'Scientific Writing',
+      'Manuscript Preparation',
+      'Research Publication',
+      'Academic Communication',
+    ],
+    certificateUrl: '/cert-dna-barcode.png',
+  },
+  {
+    id: 'cert-gcp-nida',
+    icon: '🏅',
+    title: 'Good Clinical Practice – NIDA (2025)',
+    organization: 'NIDA Clinical Trials Network',
+    year: '2025',
+    skillsGained: [
+      'Good Clinical Practice (GCP) compliance',
+      'Human subject protection & informed consent',
+      'Adverse event reporting & participant safety',
+      'Clinical research protocol adherence',
+    ],
+  },
+  {
+    id: 'cert-nptel-exp-biotech',
+    icon: '🏅',
+    title: 'NPTEL – Experimental Biotechnology',
+    organization: 'NPTEL',
+    skillsGained: [
+      'Experimental design in biotechnology',
+      'Molecular biology & analytical laboratory techniques',
+      'Bioprocess instrumentation & assay workflows',
+      'Experimental data analysis & interpretation',
+    ],
+  },
+  {
+    id: 'cert-nptel-stress-mgmt',
+    icon: '🏅',
+    title: 'NPTEL – Stress Management',
+    organization: 'NPTEL',
+    skillsGained: [
+      'Workplace & academic stress management strategies',
+      'Resilience building & cognitive coping techniques',
+      'Time management & productivity balance',
+      'Emotional well-being in professional environments',
+    ],
+  },
+  {
+    id: 'cert-cancer-cell-culture',
+    icon: '🏅',
+    title: 'Cancer Cell Culture – Sathyabama Institute',
+    organization: 'Sathyabama Institute of Science and Technology',
+    skillsGained: [
+      'Aseptic mammalian cell culture techniques',
+      'Media preparation, subculturing & cell passaging',
+      'Cell viability estimation & cytotoxicity assays',
+      'Contamination control in biosafety cabinets',
+    ],
+  },
+  {
+    id: 'cert-qa-qc-pharma',
+    icon: '🏅',
+    title: 'QA/QC & Pharmaceutical Production',
+    organization: 'Pharmaceutical Training Program',
+    skillsGained: [
+      'Quality Assurance (QA) & Quality Control (QC) systems',
+      'Good Manufacturing Practices (GMP) standards',
+      'Batch documentation & standard operating procedures (SOPs)',
+      'Pharmaceutical quality testing & regulatory compliance',
+    ],
+  },
+  {
+    id: 'cert-rna-isolation-qpcr',
+    icon: '🏅',
+    title: 'RNA Isolation & qPCR Workshop',
+    organization: 'Molecular Biology Hands-On Workshop',
+    skillsGained: [
+      'Total RNA extraction & purification protocols',
+      'RNA purity & concentration assessment',
+      'cDNA synthesis & real-time quantitative PCR (qPCR)',
+      'Gene expression amplification curve interpretation',
+    ],
+  },
+  {
+    id: 'cert-dot-elisa-mec',
+    icon: '🏅',
+    title: 'Dot ELISA Workshop – MEC',
+    organization: 'Muthayammal Engineering College (MEC)',
+    skillsGained: [
+      'Antigen–antibody immunodiagnostic principles',
+      'Dot-blot ELISA membrane assay execution',
+      'Enzyme-linked substrate detection & interpretation',
+      'Diagnostic sensitivity & specificity evaluation',
+    ],
+  },
+  {
+    id: 'cert-clinical-trial-mgmt',
+    icon: '🏅',
+    title: 'Clinical Trial Management',
+    organization: 'Clinical Research Training',
+    skillsGained: [
+      'Clinical trial lifecycle & site coordination',
+      'Essential trial documentation & Trial Master File (TMF)',
+      'Participant recruitment, screening & retention workflows',
+      'Clinical monitoring & regulatory audit readiness',
+    ],
+  },
+  {
+    id: 'cert-smart-india-hackathon',
+    icon: '🏆',
+    title: 'Smart India Hackathon – 2026',
+    organization: 'Government of India',
+    year: '2026',
+    skillsGained: [
+      'Science-driven problem solving & rapid prototyping',
+      'Interdisciplinary teamwork & innovation pitching',
+      'Translational biotechnology solution design',
+      'Technical documentation & presentation',
+    ],
+  },
 ];
 
 export const ACHIEVEMENTS: AchievementItem[] = [

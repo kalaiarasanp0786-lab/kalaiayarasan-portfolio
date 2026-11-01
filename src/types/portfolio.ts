@@ -45,23 +45,16 @@ export interface ProjectItem {
   linkLabel?: string;
 }
 
-export interface FeaturedCertification {
-  label: string;
-  title: string;
-  organization: string;
-  date: string;
-  description: string;
-  skills: string[];
-  imageUrl: string;
-}
-
 export interface CertificationItem {
+  id: string;
   icon: string;
   title: string;
-  organization?: string;
-  skillsLabel?: string;
-  skillsList?: string[];
-  certificateImage?: string;
+  organization: string;
+  year?: string;
+  category?: string;
+  description?: string;
+  skillsGained: string[];
+  certificateUrl?: string;
 }
 
 export interface AchievementItem {
