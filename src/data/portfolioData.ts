@@ -463,7 +463,8 @@ export const CONTACT_LINKS: ContactLinkItem[] = [
     icon: '📧',
     label: 'Email',
     value: 'kalaiyarasan8504@gmail.com',
-    href: 'mailto:kalaiyarasan8504@gmail.com',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=kalaiyarasan8504@gmail.com',
+    external: true,
   },
   {
     icon: '📱',

@@ -88,7 +88,9 @@ export const ContactSection: React.FC = () => {
                   </a>
 
                   <a
-                    href="mailto:kalaiyarasan8504@gmail.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=kalaiyarasan8504@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     title="Email"
                     aria-label="Email"
                     className="w-[50px] h-[50px] rounded-[11px] bg-[#1E293B] border border-[#334155] flex items-center justify-center transition-all duration-200 hover:border-[#10B981] hover:-translate-y-1 hover:bg-[#10B981]/10"
